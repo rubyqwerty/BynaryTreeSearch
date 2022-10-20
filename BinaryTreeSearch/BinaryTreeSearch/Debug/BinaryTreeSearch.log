@@ -1,0 +1,5 @@
+﻿  BinaryTreeSearch.cpp
+  BinaryTreeSearchStructure.cpp
+  Создание кода...
+C:\Users\Admin\source\repos\BinaryTreeSearch\BinaryTreeSearch\BinaryTreeSearchStructure.cpp(37): warning C4715: BynaryTreeSearch::search: значение возвращается не при всех путях выполнения
+  BinaryTreeSearch.vcxproj -> C:\Users\Admin\source\repos\BinaryTreeSearch\Debug\BinaryTreeSearch.exe
