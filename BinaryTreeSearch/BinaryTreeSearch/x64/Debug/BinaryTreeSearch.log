@@ -1,6 +1,2 @@
-﻿  BinaryTreeSearchStructure.cpp
-C:\Users\gruni\source\repos\BynaryTreeSearch\BynaryTreeSearch-main\BinaryTreeSearch\BinaryTreeSearch\BinaryTreeSearchStructure.cpp(37): warning C4715: BynaryTreeSearch::search: значение возвращается не при всех путях выполнения
-C:\Users\gruni\source\repos\BynaryTreeSearch\BynaryTreeSearch-main\BinaryTreeSearch\BinaryTreeSearch\BinaryTreeSearchStructure.cpp(54): warning C4715: BynaryTreeSearch::min_elem_in_the_subtree: значение возвращается не при всех путях выполнения
-C:\Users\gruni\source\repos\BynaryTreeSearch\BynaryTreeSearch-main\BinaryTreeSearch\BinaryTreeSearch\BinaryTreeSearchStructure.cpp(96): warning C4715: BynaryTreeSearch::deleteNode: значение возвращается не при всех путях выполнения
-C:\Users\gruni\source\repos\BynaryTreeSearch\BynaryTreeSearch-main\BinaryTreeSearch\BinaryTreeSearch\BinaryTreeSearchStructure.cpp(103): warning C4715: BynaryTreeSearch::modifyTheValue: значение возвращается не при всех путях выполнения
-  BinaryTreeSearch.vcxproj -> C:\Users\gruni\source\repos\BynaryTreeSearch\BynaryTreeSearch-main\BinaryTreeSearch\x64\Debug\BinaryTreeSearch.exe
+﻿  BinaryTreeSearch.cpp
+  BinaryTreeSearch.vcxproj -> C:\Users\Admin\source\repos\BinaryTreeSearch\x64\Debug\BinaryTreeSearch.exe

@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 using namespace std;
 
 struct node {
@@ -11,12 +12,13 @@ struct node {
 class BynaryTreeSearch {
 private:
 	node* root = nullptr;
-	node* min_elem_in_the_subtree(node*, node* descendant = nullptr);
+	int min_elem_in_the_subtree(node*, node* descendant = nullptr);
 public:
 	void push(int, node* edge = nullptr);
 	int search(int, node* edge = nullptr);
 	int deleteNode(int, node* edge = nullptr, node* descendant = nullptr);
-	int modifyTheValue(int, int);
+	int replace(int, int);
 	void clear(node* edge = nullptr);
-	~BynaryTreeSearch();
+	void bypassing(node* edge = nullptr);
+	~BynaryTreeSearch() { clear(); };
 };
