@@ -11,7 +11,7 @@ int main()
     a.push(1);
     a.push(3);
     a.push(10);
-
-    cout << a.search(9);
-    a.push(1);
+    a.clear();
+    int k;
+    cin >> k;
 }

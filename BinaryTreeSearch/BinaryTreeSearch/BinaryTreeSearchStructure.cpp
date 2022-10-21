@@ -36,18 +36,21 @@ int BynaryTreeSearch::search(int key, node* edge)
 			search(key, edge->right);
 }
 
-node* BynaryTreeSearch::min_elem_in_the_subtree(node* edge)
+node* BynaryTreeSearch::min_elem_in_the_subtree(node* edge, node* descendant)
 {
 	if (!edge->left && !edge->right)
 	{
-		return new node(edge->value);
-		delete edge;
+		descendant->left = nullptr;
+		return edge;
 	}
 	if (!edge->left)
 	{
-		return edge;
+		descendant->left = edge->right;
+		int n = edge->value;
+		delete edge;
+		return new node(n);
 	}
-	min_elem_in_the_subtree(edge->left);
+	min_elem_in_the_subtree(edge->left, edge);
 }
 
 int BynaryTreeSearch::deleteNode(int key, node* edge, node* descendant)
@@ -64,7 +67,7 @@ int BynaryTreeSearch::deleteNode(int key, node* edge, node* descendant)
 		}
 		else if (edge->left && edge->right)
 		{
-			//
+			edge = min_elem_in_the_subtree(edge->right, edge);
 		}
 		else if (edge->left)
 		{
@@ -90,4 +93,27 @@ int BynaryTreeSearch::deleteNode(int key, node* edge, node* descendant)
 			return 0; //нет элемента с таким ключом
 		else
 			deleteNode(key, edge->right, edge);
+}
+
+int BynaryTreeSearch::modifyTheValue(int value1, int value2)
+{
+	if (!deleteNode(value1))
+		return 0; // невозможно заменить элемент, так как нет такого элемента
+	push(value2);
+}
+
+void BynaryTreeSearch::clear(node* edge)
+{
+	if (!edge) edge = root;
+	if (!edge) return;
+	if (edge->left)
+		clear(edge->left);
+	if (edge->right)
+		clear(edge->right);
+	delete edge;
+}
+
+BynaryTreeSearch::~BynaryTreeSearch()
+{
+	clear();
 }
